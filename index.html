@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Etiketleri -->
+    <title>Yakında Geliyor | 404 Sayfa Bulunamadı - Şirket Adı</title>
+    <meta name="description" content="Sitemiz şu anda yapım aşamasındadır. En kısa sürede harika içeriklerle hizmetinizde olacağız. 404 sayfa bulunamadı hatası.">
+    <meta name="keywords" content="404, sayfa bulunamadı, yapım aşaması, yakında, web sitesi, geliştirme">
+    <meta name="author" content="Şirket Adı">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Yakında Geliyor | 404 Sayfa Bulunamadı - Şirket Adı">
+    <meta property="og:description" content="Sitemiz şu anda yapım aşamasındadır. En kısa sürede harika içeriklerle hizmetinizde olacağız.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sirketadiniz.com">
+    <meta property="og:image" content="https://www.sirketadiniz.com/images/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yakında Geliyor | 404 Sayfa Bulunamadı - Şirket Adı">
+    <meta name="twitter:description" content="Sitemiz şu anda yapım aşamasındadır. En kısa sürede harika içeriklerle hizmetinizde olacağız.">
+    <meta name="twitter:image" content="https://www.sirketadiniz.com/images/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="nofollow" href="https://justpaste.it/redirect/a8vfr/https%3A%2F%2Fwww.sirketadiniz.com%2F404">
+    
+    <!-- Favicon -->
+    <link rel="nofollow" type="image/x-icon" href=''>
+    <link rel="nofollow" sizes="180x180" href=''>
+    <link rel="nofollow" type="image/png" sizes="32x32" href=''>
+    <link rel="nofollow" type="image/png" sizes="16x16" href=''>
+    
+    <!-- Font Awesome -->
+    <link rel="nofollow" href="https://justpaste.it/redirect/a8vfr/https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Ffont-awesome%2F6.4.0%2Fcss%2Fall.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="nofollow" href="https://justpaste.it/redirect/a8vfr/https%3A%2F%2Ffonts.googleapis.com">
+    <link rel="nofollow" href="https://justpaste.it/redirect/a8vfr/https%3A%2F%2Ffonts.gstatic.com" crossorigin>
+    <link href="https://justpaste.it/redirect/a8vfr/https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPoppins%3Awght%40300%3B400%3B500%3B600%3B700%3B800%3B900%26amp%3Bdisplay%3Dswap" rel="nofollow">
+    
+    <style>
+        * {
+            0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b69 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            padding-bottom: 0;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        /* Açılış Animasyonu */
+        .intro-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1a0a2e, #4a1e8c);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeOut 2.5s ease-in-out 2s forwards;
+        }
+        
+        .intro-content {
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            20px;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+            animation: pulse 2s infinite, float 3s ease-in-out infinite;
+        }
+        
+        .intro-text {
+            font-size: 1.5rem;
+            color: white;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            background: rgba(26, 10, 46, 0.7);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: reveal 1.5s ease-out 3s forwards;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: -1;
+        }
+        
+        .error-code {
+            font-size: 10rem;
+            font-weight: 800;
+            color: transparent;
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            10px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            1;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: zoomIn 1s ease-out 3.5s forwards, glow 2s ease-in-out infinite alternate;
+        }
+        
+        .error-text {
+            font-size: 2.2rem;
+            font-weight: 600;
+            25px;
+            color: #e0e0e0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 1s ease-out 4s forwards;
+        }
+        
+        .emoji {
+            font-size: 5rem;
+            25px 0;
+            opacity: 0;
+            transform: scale(0);
+            animation: popIn 0.8s ease-out 4.5s forwards, bounce 2s ease-in-out infinite 5.5s;
+        }
+        
+        .construction {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 215, 0, 0.1);
+            padding: 15px 30px;
+            border-radius: 50px;
+            25px 0;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInRight 1s ease-out 5s forwards;
+        }
+        
+        .construction-icon {
+            font-size: 1.8rem;
+            15px;
+            color: #ffd700;
+        }
+        
+        .message {
+            font-size: 1.3rem;
+            1.7;
+            35px;
+            color: #c2c2c2;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s ease-out 5.5s forwards;
+        }
+        
+        .countdown {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffd700;
+            25px 0;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            opacity: 0;
+            animation: fadeIn 1s ease-out 6s forwards, pulse 2s infinite 7s;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            35px auto;
+            max-width: 500px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 1s ease-out 6.5s forwards;
+        }
+        
+        .progress {
+            height: 100%;
+            width: 65%;
+            background: linear-gradient(90deg, #ffd700, #ffed4e, #ffd700);
+            border-radius: 10px;
+            animation: progress-animation 2s ease-in-out infinite alternate, fillProgress 2s ease-out 6.5s forwards;
+        }
+        
+        .funny-message {
+            font-style: italic;
+            25px 0;
+            color: #a0a0a0;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 7s forwards;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            40px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 7.5s forwards;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .social-link:hover {
+            background: #ffd700;
+            color: #1a0a2e;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.4);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.1;
+            color: #ffd700;
+            animation: floatAround 15s linear infinite;
+        }
+        
+        /* Schema.org Structured Data için gizli içerik */
+        .structured-data {
+            display: none;
+        }
+        
+        /* Animasyonlar */
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes reveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes zoomIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+            to { text-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.6); }
+        }
+        
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0); }
+            70% { transform: scale(1.2); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes progress-animation {
+            0% { width: 65%; }
+            100% { width: 70%; }
+        }
+        
+        @keyframes fillProgress {
+            from { width: 0%; }
+            to { width: 65%; }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes floatAround {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(100px, 50px) rotate(90deg); }
+            50% { transform: translate(50px, 100px) rotate(180deg); }
+            75% { transform: translate(-50px, 50px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+            }
+            
+            .error-code {
+                font-size: 7rem;
+            }
+            
+            .error-text {
+                font-size: 1.8rem;
+            }
+            
+            .emoji {
+                font-size: 4rem;
+            }
+            
+            .message {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            
+            .error-text {
+                font-size: 1.5rem;
+            }
+            
+            .emoji {
+                font-size: 3rem;
+            }
+            
+            .construction {
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Açılış Ekranı -->
+    <div class="intro-overlay">
+        <div class="intro-content">
+            <div class="logo"><i class="fas fa-crown"></i></div>
+            <div class="intro-text">Harika Şeyler Geliyor...</div>
+        </div>
+    </div>
+    
+    <!-- Ana İçerik -->
+    <div class="container">
+        <!-- Uçan Elementler -->
+        <div class="floating-elements">
+            <div class="floating-element" style="top: 10%; left: 5%; animation-delay: 0s;">✦</div>
+            <div class="floating-element" style="top: 20%; right: 10%; animation-delay: 2s;">❖</div>
+            <div class="floating-element" style="bottom: 30%; left: 15%; animation-delay: 4s;">♛</div>
+            <div class="floating-element" style="bottom: 15%; right: 5%; animation-delay: 6s;">✧</div>
+            <div class="floating-element" style="top: 40%; left: 20%; animation-delay: 8s;">♚</div>
+            <div class="floating-element" style="top: 60%; right: 20%; animation-delay: 10s;">✦</div>
+        </div>
+        
+        <div class="error-code">404</div>
+        <div class="error-text">Sayfa Bulunamadı</div>
+        
+        <div class="emoji">😅</div>
+        
+        <div class="construction">
+            <span class="construction-icon"><i class="fas fa-tools"></i></span>
+            <span>Site Yapım Aşamasında</span>
+        </div>
+        
+        <p class="message">
+            Üzgünüz, şu anda aradığınız sayfa mevcut değil. Ancak merak etmeyin, 
+            ekibimiz harıl harıl çalışıyor ve en kısa sürede harika bir siteyle 
+            karşınızda olacağız!
+        </p>
+        
+        <div class="countdown">Yakında aktif olacak!</div>
+        
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        
+        <p class="funny-message">
+            "Bu sayfa şu an gizemli bir maceraya çıkmış olabilir, ama yakında dönecek!"
+        </p>
+        
+        <div class="social-links">
+            <a href='' class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href='' class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href='' class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href='' class="social-link" aria-label="E-posta"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+ 
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "404 Sayfa Bulunamadı - Tamer Chess",
+        "description": "Sitemiz şu anda yapım aşamasındadır. En kısa sürede harika içeriklerle hizmetinizde olacağız.",
+        "url": "https://www.tamerchess.com/404",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Şirket Adı",
+            "url": "https://www.tamerchess.com"
+        }
+    }
+    </script>
+ 
+    <script>
+        // Emoji değiştirme animasyonu
+        document.addEventListener('DOMContentLoaded', function() {
+            const emoji = document.querySelector('.emoji');
+            const emojis = ['😅', '😊', '👷', '🚀', '💻', '🎉', '✨', '👑'];
+            let index = 0;
+            
+            setTimeout(() => {
+                setInterval(() => {
+                    emoji.textContent = emojis[index];
+                    index = (index + 1) % emojis.length;
+                }, 2000);
+            }, 5500);
+            
+            // Yüzen elementler oluştur
+            const floatingContainer = document.querySelector('.floating-elements');
+            const symbols = ['✦', '❖', '♛', '✧', '♚', '★', '✪', '♕'];
+            
+            for (let i = 0; i < 12; i++) {
+                const element = document.createElement('div');
+                element.className = 'floating-element';
+                element.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                element.style.top = Math.random() * 100 + '%';
+                element.style.left = Math.random() * 100 + '%';
+                element.style.animationDelay = Math.random() * 15 + 's';
+                element.style.fontSize = (Math.random() * 1.5 + 1.5) + 'rem';
+                floatingContainer.appendChild(element);
+            }
+        });
+    </script>
+    <footer style="padding-top: 20px; padding-bottom: 10px;">MEÖ / MMA</footer>
+</body>
+</html>
