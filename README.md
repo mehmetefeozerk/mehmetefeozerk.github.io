@@ -1,1 +1,0 @@
-# mehmetefeozerk.io
